@@ -1,13 +1,23 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>살림특가연구소</title><style>
 :root{--brown:#765747;--pink:#e35e72;--bg:#faf8f5;--line:#e9e1dc}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#282421;font-family:system-ui,'Noto Sans KR',sans-serif}button,input,select{font:inherit}button{cursor:pointer;border:0}.wrap{max-width:1160px;margin:auto;padding:20px}header{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:12px 0 25px}.logo{font-size:25px;font-weight:850;letter-spacing:-1.2px;color:var(--brown)}.logo small{display:block;font-size:11px;font-weight:500;color:#a87972;letter-spacing:0}nav{display:flex;gap:16px}nav button{background:transparent;font-weight:700;color:#51453f}.search{padding:12px 15px;border:1px solid var(--line);border-radius:25px;min-width:230px}.hero{border-radius:25px;overflow:hidden;background:linear-gradient(110deg,#f5e7e1,#fdf7ef 60%,#e9d2bc);padding:42px;min-height:230px;display:flex;align-items:center;justify-content:space-between;gap:20px}.hero h1{font-size:clamp(30px,5vw,48px);line-height:1.15;letter-spacing:-2px;margin:10px 0}.hero p{color:#725c50;line-height:1.6}.hero .art{font-size:110px;filter:drop-shadow(0 8px 12px #a77d6655)}.eyebrow{color:var(--brown);font-weight:800}.categories{display:flex;gap:9px;overflow:auto;padding:20px 0}.chip{background:white;border:1px solid var(--line);padding:13px 17px;border-radius:13px;white-space:nowrap;color:#5b5049;font-weight:700}.chip.active{background:var(--brown);color:white}section{margin:25px 0}h2{font-size:23px;letter-spacing:-.6px;margin:0 0 8px}.muted{color:#8a7b72;font-size:13px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:20px}.card{background:white;border:1px solid var(--line);border-radius:17px;overflow:hidden}.pic{height:150px;background:linear-gradient(135deg,#f8ede6,#f1e8e0);display:grid;place-items:center;font-size:65px}.info{padding:14px}.name{font-weight:750;min-height:45px}.price{font-size:21px;font-weight:850}.old{text-decoration:line-through;color:#a99b94;font-size:12px}.discount{color:#db4059;font-weight:850}.buy{width:100%;padding:11px;border-radius:10px;background:var(--brown);color:white;font-weight:750;margin-top:10px}.tag{font-size:11px;color:#b24b61;background:#ffe8ed;padding:4px 7px;border-radius:7px}.empty{grid-column:1/-1;background:white;border:1px dashed #d7c9c0;border-radius:16px;text-align:center;padding:45px;color:#887a72}.panel{background:white;border:1px solid var(--line);border-radius:20px;padding:24px;margin-top:25px}.form{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.form input,.form select{padding:12px;border:1px solid #dfd6d0;border-radius:9px;width:100%;min-width:0}.wide{grid-column:1/-1}.admin-btn{background:#f1e9e3;border-radius:10px;padding:10px;color:#6e4d3d;font-weight:750}.hide{display:none}.admin-list{margin-top:15px}.admin-row{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding:12px 0}.danger{color:#c33b4c;background:#fff0f2;border-radius:8px;padding:7px 10px}.notice{font-size:12px;line-height:1.7;color:#786e68;background:#f3ede8;border-radius:12px;padding:16px;margin-top:25px}footer{font-size:12px;color:#988980;padding:25px 0} @media(max-width:850px){nav{display:none}.grid{grid-template-columns:repeat(2,1fr)}.hero{padding:25px}.hero .art{font-size:65px}.search{min-width:0;width:100%}header{flex-wrap:wrap}.logo{flex:1}}@media(max-width:450px){.wrap{padding:13px}.hero .art{display:none}.grid{gap:9px}.pic{height:125px}.info{padding:10px}.price{font-size:18px}.form{grid-template-columns:1fr}.wide{grid-column:1}}
-.deal-link{display:block;text-decoration:none;text-align:center}.search:focus-visible,button:focus-visible,a:focus-visible{outline:2px solid #8d4050;outline-offset:2px}.compare-controls{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0}.compare-controls label{font-weight:700}.compare-controls select{margin-left:5px;padding:8px;border:1px solid var(--line);border-radius:8px;background:white}.compare-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;padding:13px 0;border-top:1px solid var(--line)}.compare-row h3{font-size:16px;margin:0 0 5px}.compare-row p{margin:4px 0}.compare-price{text-align:right}.compare-price a{display:inline-block;margin-top:5px;color:var(--brown);font-weight:700}.compare-row .muted{font-size:14px}</style></head><body><div class="wrap"><header><div class="logo">⌂ 살림특가연구소<small>신혼 · 살림 · 인테리어 특가 큐레이션</small></div><nav><button onclick="setCat('전체')">홈</button><button onclick="setCat('전체')">오늘의 특가</button><button onclick="document.getElementById('compare').scrollIntoView()">최저가 비교</button><button onclick="document.getElementById('curation').scrollIntoView()">테마기획</button></nav><input aria-label="살림템 검색" id="search" class="search" placeholder="찾고 싶은 살림템 검색"><button class="admin-btn" id="adminToggle">상품 관리</button></header><div class="hero"><div><div class="eyebrow">살림은 예쁘게, 가격은 똑똑하게!</div><h1>지금 놓치면 아쉬운<br>살림특가 모음</h1><p>직접 고른 살림템을 좋은 가격에 만나보세요.<br>구매 전 판매처에서 가격을 다시 확인해 주세요.</p><button class="buy" style="width:auto;padding:13px 22px;background:var(--pink)" onclick="document.getElementById('deals').scrollIntoView()">오늘의 특가 보기</button></div><div class="art" aria-hidden="true">🏡</div></div><section class="panel" id="compare">
+.deal-link{display:block;text-decoration:none;text-align:center}.search:focus-visible,button:focus-visible,a:focus-visible{outline:2px solid #8d4050;outline-offset:2px}.compare-controls{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0}.compare-controls label{font-weight:700}.compare-controls select{margin-left:5px;padding:8px;border:1px solid var(--line);border-radius:8px;background:white}.compare-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;padding:13px 0;border-top:1px solid var(--line)}.compare-row h3{font-size:16px;margin:0 0 5px}.compare-row p{margin:4px 0}.compare-price{text-align:right}.compare-price a{display:inline-block;margin-top:5px;color:var(--brown);font-weight:700}.compare-row .muted{font-size:14px}.compare-summary{background:#f4ece6;padding:13px 15px;border-radius:12px;margin:0 0 12px;color:#594235}
+.compare-card{display:grid;grid-template-columns:145px minmax(0,1fr);gap:16px;border:1px solid var(--line);border-radius:14px;padding:14px;margin:12px 0}
+.compare-image{position:relative;overflow:hidden;width:100%;aspect-ratio:610/581;background:#f7f0eb;border-radius:10px}
+.compare-image img{position:absolute;max-width:none;width:261.48%;left:-23.77%;top:-4.48%}
+.compare-details h3{font-size:18px;margin:0 0 6px}
+.compare-details dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:6px 10px;margin:12px 0;font-size:14px}
+.compare-details dt{color:#6e5e55}.compare-details dd{margin:0;overflow-wrap:anywhere}
+.compare-badge{display:inline-block;background:#f7e4e6;color:#823446;padding:4px 8px;border-radius:8px;font-size:14px;font-weight:750;margin-bottom:8px}
+.compare-details .deal-link{max-width:210px}
+@media(max-width:550px){.compare-card{grid-template-columns:76px minmax(0,1fr);gap:10px;padding:10px}.compare-details h3{font-size:16px}}
+.compare-image img.compare-photo{width:100%;height:100%;inset:0;object-fit:contain}.comparison-status{font-size:14px;color:#6e5e55}</style></head><body><div class="wrap"><header><div class="logo">⌂ 살림특가연구소<small>신혼 · 살림 · 인테리어 특가 큐레이션</small></div><nav><button onclick="setCat('전체')">홈</button><button onclick="setCat('전체')">오늘의 특가</button><button onclick="document.getElementById('compare').scrollIntoView()">최저가 비교</button><button onclick="document.getElementById('curation').scrollIntoView()">테마기획</button></nav><input aria-label="살림템 검색" id="search" class="search" placeholder="찾고 싶은 살림템 검색"><button class="admin-btn" id="adminToggle">상품 관리</button></header><div class="hero"><div><div class="eyebrow">살림은 예쁘게, 가격은 똑똑하게!</div><h1>지금 놓치면 아쉬운<br>살림특가 모음</h1><p>직접 고른 살림템을 좋은 가격에 만나보세요.<br>구매 전 판매처에서 가격을 다시 확인해 주세요.</p><button class="buy" style="width:auto;padding:13px 22px;background:var(--pink)" onclick="document.getElementById('deals').scrollIntoView()">오늘의 특가 보기</button></div><div class="art" aria-hidden="true">🏡</div></div><section class="panel" id="compare">
 <h2>최저가 비교</h2>
 <div class="compare-controls">
 <label>품목 <select id="compareType"><option>물티슈</option></select></label>
 <label>정렬 <select id="compareSort"><option value="price">상품가 낮은 순</option><option value="unit">100매당 가격 낮은 순</option></select></label>
 </div>
-<p class="muted">확인해 둔 상품끼리 비교해요. 표시 금액은 배송비 제외이며, 쿠폰과 회원 조건에 따라 달라질 수 있어요.</p>
-<div id="compareRows" aria-live="polite">비교 가격을 불러오는 중이에요.</div>
+<p class="muted">확인해 둔 상품끼리 비교해요. 표시 금액은 배송비 제외예요. 검색 기록 가격은 참고용으로 표시하며 최저가 집계에서 제외해요.</p>
+<div id="compareRows" aria-live="polite">비교 데이터를 불러오는 중이에요.</div>
 </section><div class="categories" id="categories"></div><section id="deals"><h2>🔥 오늘의 살림특가</h2><div class="muted">할인율은 등록된 비교 기준가를 바탕으로 계산돼요. 실제 최저가를 보장하지 않아요.</div><div class="grid" id="grid"></div></section><section id="curation"><h2>✨ 테마별 살림 큐레이션</h2><div class="categories"><button class="chip" onclick="setCat('주방')">🍳 신혼집 주방템</button><button class="chip" onclick="setCat('수납')">🧺 좁은 집 수납템</button><button class="chip" onclick="setCat('인테리어')">🛋️ 감성 인테리어</button><button class="chip" onclick="setCat('청소')">🧹 집안일 줄이는 아이템</button></div></section><section class="panel hide" id="admin"><h2>상품 관리 · 이 브라우저에서만 저장</h2><p class="muted">등록한 상품은 이 브라우저에서 미리 볼 수 있어요. 다른 방문자에게 보여주려면 상품 데이터를 내보내 사이트에 반영해야 해요.</p><div id="candidateTools">
 <button type="button" class="admin-btn" id="loadCandidates">준비된 후보 불러오기</button>
 <label class="muted">새 후보 파일 열기 <input type="file" id="candidateFile" accept=".json,application/json"></label>
@@ -95,14 +105,34 @@ const unitPrice = product => product.price * 100 / product.quantity;
 function renderComparison() {
   const sort = $('compareSort').value === 'unit' ? unitPrice : product => product.price;
   const products = comparison.filter(product => product.type === $('compareType').value);
-  products.sort((a, b) => sort(a) - sort(b) || a.price - b.price || a.name.localeCompare(b.name, 'ko'));
-  $('compareRows').innerHTML = products.length ? products.map(product => `<article class="compare-row">
-    <div><h3>${esc(product.name)}</h3><p>${esc(product.option)}</p>
-    <p class="muted">${esc(product.condition)}</p><p class="muted">${esc(product.checked)} 확인</p></div>
-    <div class="compare-price"><strong>${fmt(product.price)}</strong>
-    <p>100매당 ${won.format(unitPrice(product))}원</p>
-    <a href="${esc(product.url)}" target="_blank" rel="noopener noreferrer">쿠팡 옵션 보기</a></div>
-  </article>`).join('') : '확인된 가격이 아직 없어요.';
+  products.sort((a, b) => Number(Boolean(a.historical)) - Number(Boolean(b.historical)) || sort(a) - sort(b) || a.price - b.price || a.name.localeCompare(b.name, 'ko'));
+  if (!products.length) {
+    $('compareRows').textContent = '확인된 가격이 아직 없어요.';
+    return;
+  }
+  const unitMode = $('compareSort').value === 'unit';
+  const metric = unitMode ? '100매당 최저가' : '상품가 최저';
+  const verified = products.filter(product => !product.historical);
+  const winner = verified[0];
+  const winningPrice = winner ? (unitMode ? won.format(unitPrice(winner)) + '원 / 100매' : fmt(winner.price)) : '';
+  $('compareRows').innerHTML = (winner ? `<p class="compare-summary">가격을 확인한 ${verified.length}개 옵션 중 <strong>${metric} ${winningPrice}</strong><br>${esc(winner.name)} · ${esc(winner.option)} · ${esc(winner.discount)}</p>` : '<p class="compare-summary">현재가를 확인한 상품이 아직 없어요. 아래는 검색 기록 가격이에요.</p>') +
+    products.map(product => `<article class="compare-card">
+      <div class="compare-image">${product.image === './mamsluv-reference.png' ? '<img src="./mamsluv-reference.png" alt="맘스럽 아토클래식 캡형 물티슈 제품 이미지">' : /^https:\/\//i.test(product.image || '') ? `<img class="compare-photo" loading="lazy" src="${esc(product.image)}" alt="${esc(product.name)} 제품 이미지">` : ''}</div>
+      <div class="compare-details">
+        ${winner && !product.historical && sort(product) === sort(winner) ? `<span class="compare-badge">${metric}</span>` : ''}
+        <h3>${esc(product.name)}</h3>
+        <strong class="price">${fmt(product.price)}</strong> <span>${esc(product.discount)}</span>
+        <dl>
+          <dt>판매처</dt><dd>${esc(product.seller)}</dd>
+          <dt>구성</dt><dd>${product.packSize}매 × ${product.packCount}${product.type === '키친타월' ? '롤' : '팩'}${product.weight ? ` · 평량 ${esc(product.weight)}` : ''}</dd>
+          <dt>단가</dt><dd>100매당 ${won.format(unitPrice(product))}원</dd>
+          <dt>배송</dt><dd>${esc(product.shipping)}</dd>
+          <dt>가격 출처</dt><dd>${esc(product.checked)}${product.historical ? '' : ' 화면 확인'}</dd>
+        </dl>
+        <a class="buy deal-link" href="${esc(product.url)}" target="_blank" rel="noopener noreferrer">${esc(product.seller)} 옵션 보기</a>
+      </div>
+    </article>`).join('');
+
 }
 $('compareType').onchange = renderComparison;
 $('compareSort').onchange = renderComparison;
@@ -111,10 +141,12 @@ fetch('./sallim-comparison.json').then(response => {
   return response.json();
 }).then(data => {
   if (!Array.isArray(data)) throw new Error('Invalid comparison data');
-  comparison = data.filter(product => product && product.type === '물티슈' &&
+  comparison = data.filter(product => product && typeof product.type === 'string' && product.type.trim() &&
     Number.isSafeInteger(product.price) && product.price > 0 &&
     Number.isSafeInteger(product.quantity) && product.quantity > 0 &&
     typeof product.url === 'string' && /^https:\/\//i.test(product.url));
+  $('compareType').innerHTML = Array.from(new Set(comparison.map(product => product.type)))
+    .map(type => `<option>${esc(type)}</option>`).join('');
   renderComparison();
 }).catch(() => {
   $('compareRows').textContent = '비교 가격을 불러오지 못했어요.';
