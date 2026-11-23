@@ -31,10 +31,17 @@ module.exports = async function handler(req, res) {
 
     if (!response.ok) throw new Error('API 요청 실패');
 
-    const data = await response.json();
-    if (!Array.isArray(data.list)) {
-      throw new Error('예상과 다른 데이터 구조');
-    }
+   const data = await response.json();
+
+const list = Array.isArray(data)
+  ? data[0]?.list
+  : data.list;
+
+if (!Array.isArray(list)) {
+  throw new Error('예상과 다른 데이터 구조');
+}
+
+const products = list.flatMap((item) => {
 
     const products = data.list.flatMap((item) => {
       const name = String(item.product_name || '').trim();
@@ -42,8 +49,13 @@ module.exports = async function handler(req, res) {
         ([, pattern]) => pattern.test(name)
       )?.[0];
 
-      const price = Number(item.price_sale);
-      const originalPrice = Number(item.price_org);
+     onst price = Number(
+  String(item.price_sale || '').replace(/,/g, '')
+);
+
+const originalPrice = Number(
+  String(item.price_org || '').replace(/,/g, '')
+);
       const image = String(item.photo || '');
       const buyUrl = String(item.buyurl || '');
 
